@@ -44,7 +44,7 @@ jobs:
 
       - name: Export app with rshiny live
         run: |
-          Rscript -e 'shinylive::export("app.R","output/")
+          Rscript -e 'shinylive::export("app.R","output/")'
           mv output/* ./
       
       - name: Setup Pages
