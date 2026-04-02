@@ -40,11 +40,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          Rscript -e 'install.packages("shinylive")'
-
+          Rscript -e 'install.packages(c("shinylive","shinydashboard","dataRetrieval","dplyr","leaflet","plotly","blastula","glue"))'
+          
       - name: Export app with rshiny live
         run: |
-          Rscript -e 'shinylive::export("./","output/")'
+          Rscript -e 'shinylive::export("./", "output/")'
           mv output/* ./
       
       - name: Setup Pages
