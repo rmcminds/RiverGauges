@@ -203,3 +203,9 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
+
+# To export for local development and testing, run the following command in the R console:
+## shinylive::export("./", "shinylive_export", wasm_packages = FALSE)
+# Note: The 'wasm_packages = FALSE' argument is used to exclude the large WebAssembly files from the export
+# The actual deployment of this app is handled with GitHub Actions, which runs a similar export command
